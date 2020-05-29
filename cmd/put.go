@@ -34,7 +34,7 @@ var putCmd = &cobra.Command{
 		argsString := strings.Join(args, " ")
 		focusString := []byte(argsString)
 		ioutil.WriteFile(usrHome+"/.focus", focusString, 0644)
-		fmt.Println("Focus string added: ", focusString)
+		fmt.Println("Focus string added: ", string(focusString))
 	},
 }
 
